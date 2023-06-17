@@ -3,10 +3,11 @@ let funcionPredeterminada = () => {
     const formulario = document.getElementById('formulario')
     formulario.addEventListener('submit', (evento) => {
         evento.preventDefault();
-        let interfazHora = document.getElementById("interfazHoras").value
         let valorHora = document.getElementById("valorPorHora").value
-        let interfaz = document.getElementById("interfazHorasTrabajadas").value
-        let resultado = (valorHora*interfazHora)+(valorHora*interfaz)
+        let horasTrabajo = document.getElementById("horasTrabajo").value
+        let horasextras = document.getElementById("horasExtras").value
+        let dias = document.getElementById("dias").value
+        let resultado = ((valorHora*horasTrabajo) * dias)+((valorHora*2)*horasextras)
         document.getElementById("valorTotal").value = resultado;
     })
 }
